@@ -10,7 +10,7 @@ from data_processing_stack import DataProcessingStack, MongoDBConfiguration, Acc
 app = core.App()
 
 dev_stack_data_mining = DataMiningStack(app, 'DataMiningStackDev', env=core.Environment(region='us-east-2'))
-prod_stack_data_mining = DataMiningStack(app, 'DataMiningStackProd', env=core.Environment(region='eu-south-1'))
+prod_stack_data_mining = DataMiningStack(app, 'DataMiningStackProd', env=core.Environment(region='eu-central-1'))
 
 dev_stack_data_processing = DataProcessingStack(app, 'DataProcessingStackDev',
                                                 env=core.Environment(region='us-east-2'),
@@ -27,7 +27,7 @@ dev_stack_data_processing = DataProcessingStack(app, 'DataProcessingStackDev',
                                                     table_property=dev_stack_data_mining.table_property
                                                 ))
 prod_stack_data_processing = DataProcessingStack(app, 'DataProcessingStackProd',
-                                                 env=core.Environment(region='eu-south-1'),
+                                                 env=core.Environment(region='eu-central-1'),
                                                  mongodb_config=MongoDBConfiguration(
                                                      uri=os.environ['PROD_MONGODB_URI'],
                                                      max_page_size='10',
