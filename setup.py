@@ -16,7 +16,7 @@ with open('version', 'r') as version:
                                package_name='data_mining_stack', package_version='1.1.0'),
             private_dependency(personal_access_token=GITHUB_PERSONAL_ACCESS_TOKEN,
                                repo_user='reloc8', repo_name='stack-data-processing',
-                               package_name='data_processing_stack', package_version='1.2.0')
+                               package_name='data_processing_stack', package_version='1.3.0')
         ],
         python_requires='>=3.6'
     )
